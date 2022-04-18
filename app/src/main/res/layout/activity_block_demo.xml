@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".pages.example.BlockDemoActivity"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:background="#FFFFFF"
+>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+        <Button
+                android:id="@+id/block_body"
+                android:text="身体"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="14dp"/>
+
+        <Button
+                android:id="@+id/block_cloth"
+                android:text="衣服"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="14dp"/>
+
+        <Button
+                android:id="@+id/block_mou"
+                android:text="嘴巴"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+        <Button
+                android:id="@+id/block_hair"
+                android:text="头发"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="14dp"/>
+
+        <Button
+                android:id="@+id/block_brow"
+                android:text="眉毛"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="14dp"/>
+
+        <Button
+                android:id="@+id/block_fhair"
+                android:text="刘海"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="14dp"/>
+    </LinearLayout>
+
+
+    <com.chance.view.BlockDemoView
+            android:id="@+id/block_demo"
+            android:layout_width="1080px"
+            android:layout_height="1450px"
+            tools:ignore="MissingConstraints"/>
+
+</LinearLayout>
