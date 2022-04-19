@@ -101,8 +101,8 @@ public class BlockDemoView extends View {
         canvas.drawBitmap(mou, 240, 800, paint);
         canvas.drawBitmap(brow, 100, 390, paint);
         canvas.drawBitmap(hair, 80, 0, paint);
-        canvas.drawBitmap(fhair, 0, 60, paint);
         canvas.drawBitmap(ear, 90, 420, paint);
+        canvas.drawBitmap(fhair, 0, 60, paint);
     }
 
     public void setBodyId(int bodyId) {
