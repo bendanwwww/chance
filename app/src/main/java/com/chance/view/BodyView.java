@@ -9,9 +9,15 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 
-public class BlockDemoView extends View {
+/**
+ * 角色模型绘图
+ *
+ * @author lsy
+ */
+public class BodyView extends View {
 
     /** 画笔 */
     private Paint paint;
@@ -59,19 +65,19 @@ public class BlockDemoView extends View {
             R.drawable.c3_cloth33,
             R.drawable.c3_cloth47, R.drawable.c3_cloth51, R.drawable.c3_cloth52};
 
-    public BlockDemoView(Context context) {
+    public BodyView(Context context) {
         super(context);
     }
 
-    public BlockDemoView(Context context, @Nullable AttributeSet attrs) {
+    public BodyView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public BlockDemoView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public BodyView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
-    public BlockDemoView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public BodyView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 

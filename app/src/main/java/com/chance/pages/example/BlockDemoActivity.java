@@ -3,12 +3,10 @@ package com.chance.pages.example;
 import java.util.Random;
 
 import com.chance.R;
-import com.chance.view.BlockDemoView;
+import com.chance.view.BodyView;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BlockDemoActivity extends AppCompatActivity {
@@ -18,7 +16,7 @@ public class BlockDemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_block_demo);
 
-        BlockDemoView view = findViewById(R.id.block_demo);
+        BodyView view = findViewById(R.id.block_demo);
 
         Button changeBody = findViewById(R.id.block_body);
         Button changeCloth = findViewById(R.id.block_cloth);

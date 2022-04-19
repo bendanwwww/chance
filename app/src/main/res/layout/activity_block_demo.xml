@@ -61,7 +61,7 @@
     </LinearLayout>
 
 
-    <com.chance.view.BlockDemoView
+    <com.chance.view.BodyView
             android:id="@+id/block_demo"
             android:layout_width="1080px"
             android:layout_height="1450px"
