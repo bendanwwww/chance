@@ -9,12 +9,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".pages.CreateRoleActivity" android:screenOrientation="landscape">
+<!--            android:theme="@style/Theme.AppCompat" >-->
+
+        <activity android:name=".pages.CreateRoleActivity" android:screenOrientation="landscape"
+          android:fitsSystemWindows="true" android:clipToPadding="true">
+<!--        <activity android:name=".pages.example.BlockDemoActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".pages.HomeActivity" android:screenOrientation="landscape"
+                  android:fitsSystemWindows="true" android:clipToPadding="true"></activity>
     </application>
 
 </manifest>

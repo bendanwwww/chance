@@ -3,7 +3,7 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              tools:context=".pages.example.BlockDemoActivity"
+              tools:context=".pages.CreateRoleActivity"
               android:gravity="center"
               android:orientation="vertical"
               android:background="#FFFFFF"
@@ -11,7 +11,8 @@
     <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/bg">
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_weight=".30"
@@ -20,38 +21,48 @@
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".80"
-                    android:orientation="vertical"
-                    android:background="@color/dy_weight_bg">
-<!--                <com.chance.view.BodyView-->
-<!--                        android:id="@+id/block_demo"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content" />-->
+                    android:layout_weight=".77"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                <com.chance.view.BodyView
+                        android:gravity="center"
+                        android:id="@+id/block"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"/>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".03"
-                    android:orientation="vertical"
-                    android:background="@color/black1">
+                    android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="姬    元"
                     android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:textSize="20dp">
-
                 </TextView>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".17"
-                    android:orientation="vertical"
-                    android:background="@color/dy_weight_bg">
+                    android:layout_weight=".20"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="  生平:"
+                        android:textStyle="bold"
+                        android:singleLine="false"
+                        android:ellipsize="none"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/white"
+                        android:textSize="20dp">
+                </TextView>
             </LinearLayout>
-
         </LinearLayout>
         <LinearLayout
                 android:layout_width="wrap_content"
@@ -62,50 +73,193 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/white2">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".40"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="              身体"
+                            android:gravity="center_vertical|left"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <Button
+                            android:id="@+id/block_body"
+                            android:text="换装"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/black1">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".40"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="              衣服"
+                            android:gravity="center_vertical|left"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <Button
+                            android:id="@+id/block_cloth"
+                            android:text="换装"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/white2">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".40"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="              嘴巴"
+                            android:gravity="center_vertical|left"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <Button
+                            android:id="@+id/block_mou"
+                            android:text="换装"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/black1">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".40"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="              头发"
+                            android:gravity="center_vertical|left"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <Button
+                            android:id="@+id/block_hair"
+                            android:text="换装"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/white2">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".40"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="              眉毛"
+                            android:gravity="center_vertical|left"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <Button
+                            android:id="@+id/block_brow"
+                            android:text="换装"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/black1">
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".14"
-                    android:orientation="vertical"
-                    android:background="@color/white2">
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".40"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="              刘海"
+                            android:gravity="center_vertical|left"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".60"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <Button
+                            android:id="@+id/block_fhair"
+                            android:text="换装"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
@@ -113,10 +267,14 @@
                     android:layout_weight=".02"
                     android:orientation="vertical">
                 <Button
+                    android:id="@+id/ok"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
                     android:text="确认">
-
                 </Button>
             </LinearLayout>
         </LinearLayout>

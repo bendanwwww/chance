@@ -82,15 +82,34 @@ public class BodyView extends View {
     }
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int height = MeasureSpec.getSize(heightMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(10, 10);
+        }else if (widthMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(10, height);
+        }else if (heightMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(width, 10);
+        }
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         paint = new Paint();
+        // 画布长宽
+        float width = getWidth();
+        float height = getHeight();
         // 基础图像宽度
         float bodyWidth = BitmapUtil.getBitMapWidth(getResources(), R.drawable.c3_body1);
         // 其他图像放大倍数
-        float multiple = getWidth() / bodyWidth;
+        float multiple = width / bodyWidth;
         // 组件 bitmap
-        Bitmap body = BitmapUtil.getBitMapWithWidth(getResources(), BODIES[bodyId], getWidth());
+        Bitmap body = BitmapUtil.getBitMapWithWidth(getResources(), BODIES[bodyId], width);
         Bitmap cloth = BitmapUtil.getBitMapWithMultiple(getResources(), CLOTHS[clothId], multiple);
         Bitmap ear = BitmapUtil.getBitMapWithMultiple(getResources(), R.drawable.c3_ear0, multiple);
         Bitmap eye = BitmapUtil.getBitMapWithMultiple(getResources(), R.drawable.c3_eye0, multiple);
@@ -100,15 +119,26 @@ public class BodyView extends View {
         Bitmap fhair = BitmapUtil.getBitMapWithMultiple(getResources(), F_HAIR[fHairId], multiple);
         Bitmap brow = BitmapUtil.getBitMapWithMultiple(getResources(), BROWS[browId], multiple);
         // 绘图
-        canvas.drawBitmap(body, 90, 0, paint);
-        canvas.drawBitmap(cloth, 60, body.getHeight() - cloth.getHeight(), paint);
-        canvas.drawBitmap(eye, 120, 480, paint);
-        canvas.drawBitmap(eyeb, 170, 490, paint);
-        canvas.drawBitmap(mou, 240, 800, paint);
-        canvas.drawBitmap(brow, 100, 390, paint);
-        canvas.drawBitmap(hair, 80, 0, paint);
-        canvas.drawBitmap(ear, 90, 420, paint);
-        canvas.drawBitmap(fhair, 0, 60, paint);
+        // width: 1080 height: 1450 body height: 1245
+        canvas.drawBitmap(body, width * 0.083F, 0, paint);
+        canvas.drawBitmap(cloth, width * 0.056F, body.getHeight() - cloth.getHeight(), paint);
+        canvas.drawBitmap(eye, width * 0.111F, body.getHeight() * 0.385F, paint);
+        canvas.drawBitmap(eyeb, width * 0.157F, body.getHeight() * 0.393F, paint);
+        canvas.drawBitmap(mou, width * 0.222F, body.getHeight() * 0.642F, paint);
+        canvas.drawBitmap(brow, width * 0.093F, body.getHeight() * 0.313F, paint);
+        canvas.drawBitmap(hair, width * 0.074F, 0, paint);
+        canvas.drawBitmap(ear, width * 0.083F, body.getHeight() * 0.337F, paint);
+        canvas.drawBitmap(fhair, 0, body.getHeight() * 0.048F, paint);
+//
+//        canvas.drawBitmap(body, width * 0.083F, 0, paint);
+//        canvas.drawBitmap(cloth, width * 0.056F, body.getHeight() - cloth.getHeight(), paint);
+//        canvas.drawBitmap(eye, width * 0.111F, 480, paint);
+//        canvas.drawBitmap(eyeb, width * 0.157F, 490, paint);
+//        canvas.drawBitmap(mou, width * 0.222F, 800, paint);
+//        canvas.drawBitmap(brow, width * 0.093F, 390, paint);
+//        canvas.drawBitmap(hair, width * 0.074F, 0, paint);
+//        canvas.drawBitmap(ear, width * 0.083F, 420, paint);
+//        canvas.drawBitmap(fhair, 0, 60, paint);
     }
 
     public void setBodyId(int bodyId) {
