@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 
 /**
- * 角色模型绘图
+ * 角色模型视图
  *
  * @author lsy
  */
@@ -104,10 +104,15 @@ public class BodyView extends View {
         // 画布长宽
         float width = getWidth();
         float height = getHeight();
-        // 基础图像宽度
+        // 基础图像大小
         float bodyWidth = BitmapUtil.getBitMapWidth(getResources(), R.drawable.c3_body1);
-        // 其他图像放大倍数
+        float bodyHeight = BitmapUtil.getBitMapHeight(getResources(), R.drawable.c3_body1);
+        // 修正画布宽度
+        width = width > height ? height * bodyWidth / bodyHeight : width;
+        // 图像放大倍数
         float multiple = width / bodyWidth;
+        // 图像居中
+        float gap = (getWidth() - width) / 2;
         // 组件 bitmap
         Bitmap body = BitmapUtil.getBitMapWithWidth(getResources(), BODIES[bodyId], width);
         Bitmap cloth = BitmapUtil.getBitMapWithMultiple(getResources(), CLOTHS[clothId], multiple);
@@ -120,25 +125,15 @@ public class BodyView extends View {
         Bitmap brow = BitmapUtil.getBitMapWithMultiple(getResources(), BROWS[browId], multiple);
         // 绘图
         // width: 1080 height: 1450 body height: 1245
-        canvas.drawBitmap(body, width * 0.083F, 0, paint);
-        canvas.drawBitmap(cloth, width * 0.056F, body.getHeight() - cloth.getHeight(), paint);
-        canvas.drawBitmap(eye, width * 0.111F, body.getHeight() * 0.385F, paint);
-        canvas.drawBitmap(eyeb, width * 0.157F, body.getHeight() * 0.393F, paint);
-        canvas.drawBitmap(mou, width * 0.222F, body.getHeight() * 0.642F, paint);
-        canvas.drawBitmap(brow, width * 0.093F, body.getHeight() * 0.313F, paint);
-        canvas.drawBitmap(hair, width * 0.074F, 0, paint);
-        canvas.drawBitmap(ear, width * 0.083F, body.getHeight() * 0.337F, paint);
-        canvas.drawBitmap(fhair, 0, body.getHeight() * 0.048F, paint);
-//
-//        canvas.drawBitmap(body, width * 0.083F, 0, paint);
-//        canvas.drawBitmap(cloth, width * 0.056F, body.getHeight() - cloth.getHeight(), paint);
-//        canvas.drawBitmap(eye, width * 0.111F, 480, paint);
-//        canvas.drawBitmap(eyeb, width * 0.157F, 490, paint);
-//        canvas.drawBitmap(mou, width * 0.222F, 800, paint);
-//        canvas.drawBitmap(brow, width * 0.093F, 390, paint);
-//        canvas.drawBitmap(hair, width * 0.074F, 0, paint);
-//        canvas.drawBitmap(ear, width * 0.083F, 420, paint);
-//        canvas.drawBitmap(fhair, 0, 60, paint);
+        canvas.drawBitmap(body, gap + width * 0.083F, 0, paint);
+        canvas.drawBitmap(cloth, gap + width * 0.056F, body.getHeight() - cloth.getHeight(), paint);
+        canvas.drawBitmap(eye, gap + width * 0.111F, body.getHeight() * 0.385F, paint);
+        canvas.drawBitmap(eyeb, gap + width * 0.157F, body.getHeight() * 0.393F, paint);
+        canvas.drawBitmap(mou, gap + width * 0.222F, body.getHeight() * 0.642F, paint);
+        canvas.drawBitmap(brow, gap + width * 0.093F, body.getHeight() * 0.313F, paint);
+        canvas.drawBitmap(hair, gap + width * 0.074F, 0, paint);
+        canvas.drawBitmap(ear, gap + width * 0.083F, body.getHeight() * 0.337F, paint);
+        canvas.drawBitmap(fhair, gap, body.getHeight() * 0.048F, paint);
     }
 
     public void setBodyId(int bodyId) {

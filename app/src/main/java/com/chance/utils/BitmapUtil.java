@@ -25,6 +25,14 @@ public class BitmapUtil {
         return bitmap.getWidth();
     }
 
+    public static float getBitMapHeight(Resources resources, int id) {
+        Bitmap bitmap = ((BitmapDrawable) resources.getDrawable(id)).getBitmap();
+        if (Objects.isNull(bitmap)) {
+            return 0;
+        }
+        return bitmap.getHeight();
+    }
+
     public static Bitmap getBitMap(Resources resources, int id) {
         return ((BitmapDrawable) resources.getDrawable(id)).getBitmap();
     }
