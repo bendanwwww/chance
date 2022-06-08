@@ -15,7 +15,7 @@
             android:background="@drawable/repeat_bg">
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_weight=".10"
+                android:layout_weight=".100"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -23,10 +23,18 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical"
                 android:background="#90984436">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:gravity="center"
+                      android:fontFamily="@font/title"
+                      android:textColor="@color/dy_weight_bg"
+                      android:textSize="20dp"
+                      android:text="化 身 设 置">
+            </TextView>
         </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_weight=".80"
+                android:layout_weight=".70"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -35,7 +43,7 @@
                 android:orientation="horizontal">
             <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_weight=".35"
+                    android:layout_weight=".40"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
                     android:orientation="vertical"
@@ -48,7 +56,7 @@
                     android:orientation="vertical">
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_weight=".65"
+                        android:layout_weight=".90"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:orientation="vertical"
@@ -61,33 +69,134 @@
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_weight=".35"
+                        android:layout_weight=".10"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:orientation="vertical"
                         android:background="#90984436">
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight=".15"
+                              android:gravity="center"
+                              android:fontFamily="@font/content"
+                              android:textColor="@color/dy_weight_bg"
+                              android:textSize="18dp"
+                              android:text="姬元">
+                    </TextView>
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight=".85"
+                              android:scrollHorizontally="false"
+                              android:inputType="textMultiLine"
+                              android:fontFamily="@font/content"
+                              android:textColor="@color/dy_weight_bg"
+                              android:textSize="18dp"
+                              android:text="  姬元\n  姓姬名元\n  是个行走的机缘\n  ... ...">
+                    </TextView>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_weight=".35"
+                    android:layout_weight=".20"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical"
                     android:background="#90984436">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight=".20"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/block_body"
+                            android:text="脸型"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight=".20"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/block_hair"
+                            android:text="发型"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight=".20"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/block_brow"
+                            android:text="眉型"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight=".20"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/block_mou"
+                            android:text="嘴型"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight=".20"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/block_cloth"
+                            android:text="衣服"/>
+                </LinearLayout>
+
+
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_weight=".10"
+<!--        <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_weight=".10"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:background="#90984436">-->
+        <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical"
-                android:background="#90984436">
-        </LinearLayout>
+                android:layout_marginBottom="5dp"
+                android:text="确认">
+        </Button>
+<!--        </LinearLayout>-->
     </LinearLayout>
 
 </LinearLayout>

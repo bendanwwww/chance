@@ -9,7 +9,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 
 /**
@@ -90,9 +89,9 @@ public class BodyView extends View {
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST) {
             setMeasuredDimension(10, 10);
-        }else if (widthMode == MeasureSpec.AT_MOST) {
+        } else if (widthMode == MeasureSpec.AT_MOST) {
             setMeasuredDimension(10, height);
-        }else if (heightMode == MeasureSpec.AT_MOST) {
+        } else if (heightMode == MeasureSpec.AT_MOST) {
             setMeasuredDimension(width, 10);
         }
     }
