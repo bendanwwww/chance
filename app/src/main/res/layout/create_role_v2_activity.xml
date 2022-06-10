@@ -43,7 +43,7 @@
                 android:orientation="horizontal">
             <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_weight=".40"
+                    android:layout_weight=".1000"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
                     android:orientation="vertical"
@@ -51,7 +51,7 @@
             </LinearLayout>
             <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_weight=".30"
+                    android:layout_weight=".10"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                 <LinearLayout
@@ -97,26 +97,26 @@
             </LinearLayout>
             <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_weight=".20"
+                    android:layout_weight=".60"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical"
                     android:background="#90984436">
 
-                <LinearLayout
-                        android:layout_width="match_parent"
+<!--                <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_weight=".20"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:gravity="center_horizontal">-->
+                <com.chance.view.ChooseControlView
+                        android:gravity="center_horizontal"
                         android:layout_weight=".20"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/block_body"
                         android:orientation="vertical"
-                        android:gravity="center_horizontal">
-                    <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:id="@+id/block_body"
-                            android:text="脸型"/>
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"/>
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -124,13 +124,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
-                    <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:id="@+id/block_hair"
-                            android:text="发型"/>
+<!--                    <Button-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="fill_parent"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:id="@+id/block_hair"-->
+<!--                            android:text="发型"/>-->
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -138,13 +138,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
-                    <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:id="@+id/block_brow"
-                            android:text="眉型"/>
+<!--                    <Button-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="fill_parent"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:id="@+id/block_brow"-->
+<!--                            android:text="眉型"/>-->
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -152,13 +152,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
-                    <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:id="@+id/block_mou"
-                            android:text="嘴型"/>
+<!--                    <Button-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="fill_parent"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:id="@+id/block_mou"-->
+<!--                            android:text="嘴型"/>-->
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -166,13 +166,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
-                    <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:id="@+id/block_cloth"
-                            android:text="衣服"/>
+<!--                    <Button-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="fill_parent"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:id="@+id/block_cloth"-->
+<!--                            android:text="衣服"/>-->
                 </LinearLayout>
 
 

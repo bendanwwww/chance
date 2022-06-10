@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".pages.CreateRoleActivity"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:background="@drawable/repeat_bg"
+>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1.3"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:background="#90984436" tools:ignore="Suspicious0dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:gravity="center"
+                          android:fontFamily="@font/title"
+                          android:textColor="@color/dy_weight_bg"
+                          android:textSize="20dp"
+                          android:text="化 身 设 置">
+                </TextView>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="7.7"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal" tools:ignore="Suspicious0dp">
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+                        android:background="#90984436" tools:ignore="Suspicious0dp">
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical" tools:ignore="Suspicious0dp">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="6"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <com.chance.view.BodyView
+                                        android:gravity="center"
+                                        android:id="@+id/block"
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="4"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:layout_weight=".15"
+                                          android:gravity="center"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:textSize="18dp"
+                                          android:text="姬元">
+                                </TextView>
+                                <TextView android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:layout_weight=".85"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:textSize="18dp"
+                                          android:text="  姬元\n  姓姬名元\n  是个行走的机缘\n  ... ...">
+                                </TextView>
+                        </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" tools:ignore="Suspicious0dp">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="0dp"
+                                          android:layout_height="match_parent"
+                                          android:layout_weight="2"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:layout_marginLeft="10dp"
+                                          android:textSize="20dp"
+                                          android:text="脸型">
+                                </TextView>
+                                <com.chance.view.ChooseControlView
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:id="@+id/block_body"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="0dp"
+                                          android:layout_height="match_parent"
+                                          android:layout_weight="2"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:layout_marginLeft="10dp"
+                                          android:textSize="20dp"
+                                          android:text="发型">
+                                </TextView>
+                                <com.chance.view.ChooseControlView
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:id="@+id/block_hair"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="0dp"
+                                          android:layout_height="match_parent"
+                                          android:layout_weight="2"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:layout_marginLeft="10dp"
+                                          android:textSize="20dp"
+                                          android:text="眉型">
+                                </TextView>
+                                <com.chance.view.ChooseControlView
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:id="@+id/block_brow"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="0dp"
+                                          android:layout_height="match_parent"
+                                          android:layout_weight="2"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:layout_marginLeft="10dp"
+                                          android:textSize="20dp"
+                                          android:text="嘴型">
+                                </TextView>
+                                <com.chance.view.ChooseControlView
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:id="@+id/block_mou"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal"
+                                android:background="#90984436" tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="0dp"
+                                          android:layout_height="match_parent"
+                                          android:layout_weight="2"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:layout_marginLeft="10dp"
+                                          android:textSize="20dp"
+                                          android:text="服饰">
+                                </TextView>
+                                <com.chance.view.ChooseControlView
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:id="@+id/block_cloth"
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent" />
+                        </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:background="#90984436" tools:ignore="Suspicious0dp">
+        </LinearLayout>
+</LinearLayout>
