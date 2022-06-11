@@ -16,10 +16,10 @@ public enum EyeB {
     private BlockVO block;
 
     EyeB(int id) {
-        this(id, 0L, 0L);
+        this(id, 0F, 0F);
     }
 
-    EyeB(int index, long topOffset, long leftOffset) {
+    EyeB(int index, float topOffset, float leftOffset) {
         this.block = new BlockVO(BlockType.EYE_B, index, topOffset, leftOffset);
     }
 

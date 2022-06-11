@@ -16,7 +16,7 @@ public enum Brow {
     BROW_3(R.drawable.c3_brow3),
     BROW_4(R.drawable.c3_brow4),
     BROW_5(R.drawable.c3_brow5),
-    BROW_6(R.drawable.c3_brow6, -4F, 0F),
+    BROW_6(R.drawable.c3_brow6, -0.0086F, 0F),
     BROW_7(R.drawable.c3_brow7),
     BROW_8(R.drawable.c3_brow8),
     BROW_9(R.drawable.c3_brow9),

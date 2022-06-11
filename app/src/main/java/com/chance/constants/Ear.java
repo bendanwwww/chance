@@ -16,10 +16,10 @@ public enum Ear {
     private BlockVO block;
 
     Ear(int id) {
-        this(id, 0L, 0L);
+        this(id, 0F, 0F);
     }
 
-    Ear(int index, long topOffset, long leftOffset) {
+    Ear(int index, float topOffset, float leftOffset) {
         this.block = new BlockVO(BlockType.EAR, index, topOffset, leftOffset);
     }
 

@@ -89,7 +89,7 @@
                                           android:gravity="center"
                                           android:fontFamily="@font/content"
                                           android:textColor="@color/dy_weight_bg"
-                                          android:textSize="18dp"
+                                          android:textSize="19dp"
                                           android:text="姬元">
                                 </TextView>
                                 <TextView android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                                           android:inputType="textMultiLine"
                                           android:fontFamily="@font/content"
                                           android:textColor="@color/dy_weight_bg"
-                                          android:textSize="18dp"
+                                          android:textSize="19dp"
                                           android:text="  姬元\n  姓姬名元\n  是个行走的机缘\n  ... ...">
                                 </TextView>
                         </LinearLayout>
