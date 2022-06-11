@@ -13,13 +13,10 @@ public class ChooseControlListener extends AbstractListener {
 
     /** 控件实体 */
     private ChooseControlView chooseControlView;
-    /** 资源数组 */
-    private int[] source;
 
-    public ChooseControlListener(List<float[]> buttonX, List<float[]> buttonY, ChooseControlView chooseControlView, int[] source) {
+    public ChooseControlListener(List<float[]> buttonX, List<float[]> buttonY, ChooseControlView chooseControlView) {
         super(buttonX, buttonY);
         this.chooseControlView = chooseControlView;
-        this.source = source;
     }
 
     @Override

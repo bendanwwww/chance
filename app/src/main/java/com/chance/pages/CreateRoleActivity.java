@@ -1,16 +1,13 @@
 package com.chance.pages;
 
-import java.util.Random;
-
 import com.chance.R;
+import com.chance.constants.BlockType;
 import com.chance.view.BodyView;
 import com.chance.view.ChooseControlView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -35,59 +32,34 @@ public class CreateRoleActivity extends AppCompatActivity {
 
         BodyView bodyView = findViewById(R.id.block);
         ChooseControlView changeBody = findViewById(R.id.block_body);
-        changeBody.setRectGap(30f);
+        changeBody.setRectGap(60f);
         changeBody.setRectTopGap(70f);
         changeBody.setBodyView(bodyView);
-        changeBody.setSource(BodyView.BODIES);
-        changeBody.setBodyState("body");
+        changeBody.setBlockType(BlockType.BODY);
         ChooseControlView changeCloth = findViewById(R.id.block_cloth);
-        changeCloth.setRectGap(30f);
+        changeCloth.setRectGap(60f);
         changeCloth.setRectTopGap(70f);
         changeCloth.setBodyView(bodyView);
-        changeCloth.setSource(BodyView.CLOTHS);
-        changeCloth.setBodyState("cloth");
+        changeCloth.setBlockType(BlockType.CLOTH);
         ChooseControlView changeMou = findViewById(R.id.block_mou);
-        changeMou.setRectGap(30f);
+        changeMou.setRectGap(60f);
         changeMou.setRectTopGap(70f);
         changeMou.setBodyView(bodyView);
-        changeMou.setSource(BodyView.MOUS);
-        changeMou.setBodyState("mou");
+        changeMou.setBlockType(BlockType.MOU);
+        ChooseControlView changeFHair = findViewById(R.id.block_fhair);
+        changeFHair.setRectGap(60f);
+        changeFHair.setRectTopGap(70f);
+        changeFHair.setBodyView(bodyView);
+        changeFHair.setBlockType(BlockType.F_HAIR);
         ChooseControlView changeHair = findViewById(R.id.block_hair);
-        changeHair.setRectGap(30f);
+        changeHair.setRectGap(60f);
         changeHair.setRectTopGap(70f);
         changeHair.setBodyView(bodyView);
-        changeHair.setSource(BodyView.HAIRS);
-        changeHair.setBodyState("hair");
+        changeHair.setBlockType(BlockType.HAIR);
         ChooseControlView changeBrow = findViewById(R.id.block_brow);
-        changeBrow.setRectGap(30f);
+        changeBrow.setRectGap(60f);
         changeBrow.setRectTopGap(70f);
         changeBrow.setBodyView(bodyView);
-        changeBrow.setSource(BodyView.BROWS);
-        changeBrow.setBodyState("brow");
-
-//        changeBody.setOnClickListener(v ->  {
-//            view.setBodyId(new Random().nextInt(6));
-//            view.invalidate();
-//        });
-//        changeCloth.setOnClickListener(v ->  {
-//            view.setClothId(new Random().nextInt(14));
-//            view.invalidate();
-//        });
-//        changeMou.setOnClickListener(v ->  {
-//            view.setMouId(new Random().nextInt(23));
-//            view.invalidate();
-//        });
-//        changeHair.setOnClickListener(v ->  {
-//            view.setHairId(new Random().nextInt(16));
-//            view.invalidate();
-//        });
-//        changeBrow.setOnClickListener(v ->  {
-//            view.setBrowId(new Random().nextInt(10));
-//            view.invalidate();
-//        });
-//        changeFHair.setOnClickListener(v ->  {
-//            view.setfHairId(new Random().nextInt(13));
-//            view.invalidate();
-//        });
+        changeBrow.setBlockType(BlockType.BROW);
     }
 }

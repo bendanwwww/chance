@@ -290,17 +290,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".02"
                     android:orientation="vertical">
-                <Button
-                    android:id="@+id/ok"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="确认"
-                    android:background="@drawable/bt">
-                </Button>
+<!--                <Button-->
+<!--                    android:id="@+id/ok"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_marginRight="2dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:text="确认"-->
+<!--                    android:background="@drawable/bt">-->
+<!--                </Button>-->
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.chance.R;
+import com.chance.constants.BlockType;
 import com.chance.listener.ChooseControlListener;
 import com.chance.utils.BitmapUtil;
 import com.chance.utils.TextUtils;
@@ -35,10 +36,8 @@ public class ChooseControlView extends View {
     private float rectGap;
     /** 人物视图 */
     private BodyView bodyView;
-    /** 组件类型 (body cloth mou hair brow) */
-    private String bodyState;
-    /** 所属资源 */
-    private int[] source;
+    /** 资源类型 */
+    private BlockType blockType;
     /** 数值 */
     private int number;
 
@@ -83,7 +82,7 @@ public class ChooseControlView extends View {
         // 绘制文字
         drawText(canvas, "" + number);
         // 添加监听器
-        this.setOnTouchListener(new ChooseControlListener(buttonXs, buttonYs, this, source));
+        this.setOnTouchListener(new ChooseControlListener(buttonXs, buttonYs, this));
     }
 
     private void drawText(Canvas canvas, String i) {
@@ -95,34 +94,6 @@ public class ChooseControlView extends View {
         canvas.drawText(i, (getWidth() - textSize * TextUtils.textLength(i)) / 2f, (getHeight() + textSize) / 2f, textPaint);
     }
 
-    // TODO
-    private void refreshBodyView(int number) {
-        switch (this.bodyState) {
-            case "body":
-                bodyView.setBodyId(number);
-                bodyView.invalidate();
-                return;
-            case "cloth":
-                bodyView.setClothId(number);
-                bodyView.invalidate();
-                return;
-            case "mou":
-                bodyView.setMouId(number);
-                bodyView.invalidate();
-                return;
-            case "hair":
-                bodyView.setHairId(number);
-                bodyView.invalidate();
-                return;
-            case "brow":
-                bodyView.setBrowId(number);
-                bodyView.invalidate();
-                return;
-            default:
-                return;
-        }
-    }
-
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -130,6 +101,11 @@ public class ChooseControlView extends View {
         this.textPaint = new Paint();
         // 绘制控件
         drawRect(canvas);
+    }
+
+    private void refreshBodyView(int number) {
+        bodyView.setViewId(blockType, number);
+        bodyView.invalidate();
     }
 
     public void setRectTopGap(float rectTopGap) {
@@ -144,16 +120,12 @@ public class ChooseControlView extends View {
         this.bodyView = bodyView;
     }
 
-    public void setBodyState(String bodyState) {
-        this.bodyState = bodyState;
-    }
-
-    public void setSource(int[] source) {
-        this.source = source;
+    public void setBlockType(BlockType blockType) {
+        this.blockType = blockType;
     }
 
     public void addNumber() {
-        if (this.number >= source.length - 1) {
+        if (this.number >= blockType.sourceIndex() - 1) {
             return;
         }
         this.number++;
