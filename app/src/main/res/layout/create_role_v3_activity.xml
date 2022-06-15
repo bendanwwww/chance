@@ -45,10 +45,104 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="3dp"
                         android:orientation="horizontal"
-                        android:backgroundTint="#BC682a20"
-                        android:padding="0dp"
-                        android:background="@drawable/bgs"
                         tools:ignore="Suspicious0dp">
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="3dp"
+                                android:orientation="vertical"
+                                android:backgroundTint="#BC682a20"
+                                android:padding="0dp"
+                                android:background="@drawable/bgs"
+                                tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="match_parent"
+                                          android:layout_height="0dp"
+                                          android:layout_weight="1"
+                                          android:layout_marginTop="10dp"
+                                          android:layout_marginBottom="4dp"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:textSize="20dp"
+                                          android:text="瞳色">
+                                </TextView>
+                                <com.chance.view.SlideControlView
+                                        android:id="@+id/slide_pupil"
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:layout_marginBottom="16dp"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:orientation="vertical"
+                                android:backgroundTint="#BC682a20"
+                                android:padding="0dp"
+                                android:background="@drawable/bgs"
+                                tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="match_parent"
+                                          android:layout_height="0dp"
+                                          android:layout_weight="1"
+                                          android:layout_marginTop="10dp"
+                                          android:layout_marginBottom="4dp"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:textSize="18dp"
+                                          android:text="发色(前)">
+                                </TextView>
+                                <com.chance.view.SlideControlView
+                                        android:id="@+id/slide_h_fhair"
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:layout_marginBottom="16dp"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:orientation="vertical"
+                                android:backgroundTint="#BC682a20"
+                                android:padding="0dp"
+                                android:background="@drawable/bgs"
+                                tools:ignore="Suspicious0dp">
+                                <TextView android:layout_width="match_parent"
+                                          android:layout_height="0dp"
+                                          android:layout_weight="1"
+                                          android:layout_marginTop="10dp"
+                                          android:layout_marginBottom="4dp"
+                                          android:scrollHorizontally="false"
+                                          android:inputType="textMultiLine"
+                                          android:fontFamily="@font/content"
+                                          android:textColor="@color/dy_weight_bg"
+                                          android:gravity="center"
+                                          android:textSize="18dp"
+                                          android:text="发色(后)">
+                                </TextView>
+                                <com.chance.view.SlideControlView
+                                        android:id="@+id/slide_hair"
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:layout_marginBottom="16dp"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp" />
+                        </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="0dp"

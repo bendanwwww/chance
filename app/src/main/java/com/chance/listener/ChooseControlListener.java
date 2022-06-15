@@ -5,7 +5,7 @@ import java.util.List;
 import com.chance.view.ChooseControlView;
 
 /**
- * 日程编辑按钮监听器
+ * 选择控件监听器
  *
  * @author lsy
  */
@@ -20,7 +20,7 @@ public class ChooseControlListener extends AbstractListener {
     }
 
     @Override
-    public void downAction(int i) {
+    public void downAction(int i, float downX, float downY) {
         if (i == 0) {
             chooseControlView.reduceNumber();
         }
@@ -30,12 +30,7 @@ public class ChooseControlListener extends AbstractListener {
     }
 
     @Override
-    public void moveAction(int i) {
-
-    }
-
-    @Override
-    public void upAction(int i) {
-
+    public ListenerType listenerType() {
+        return ListenerType.CLICK;
     }
 }

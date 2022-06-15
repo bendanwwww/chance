@@ -1,7 +1,9 @@
 package com.chance.listener;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import android.graphics.PointF;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -12,12 +14,23 @@ import android.view.View;
  */
 public abstract class AbstractListener implements View.OnTouchListener {
 
-    private List<float[]> buttonXs;
-    private List<float[]> buttonYs;
+    protected List<float[]> buttonXs;
+    protected List<float[]> buttonYs;
+
+    /** 初始热区 */
+    protected List<float[]> initButtonXs;
+    protected List<float[]> initButtonYs;
+
+    /** 按下坐标 */
+    private PointF startPoint = new PointF();
+    /** 离开的坐标 */
+    private PointF endPoint = new PointF();
 
     public AbstractListener(List<float[]> buttonXs, List<float[]> buttonYs) {
         this.buttonXs = buttonXs;
         this.buttonYs = buttonYs;
+        this.initButtonXs = buttonXs.stream().map(fs -> new float[] {fs[0], fs[1]}).collect(Collectors.toList());
+        this.initButtonYs = buttonYs.stream().map(fs -> new float[] {fs[0], fs[1]}).collect(Collectors.toList());
     }
 
     @Override
@@ -25,18 +38,25 @@ public abstract class AbstractListener implements View.OnTouchListener {
         float downX = event.getX();
         float downY = event.getY();
         int index;
-        if ((index = inCoordinate(downX, downY)) < 0) {
+        if ((index = inCoordinate(downX, downY)) < 0 && ListenerType.CLICK.equals(listenerType())) {
             return true;
         }
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                downAction(index);
+                startPoint.set(event.getX(), event.getY());
+                downAction(index, downX, downY);
                 break;
             case MotionEvent.ACTION_MOVE:
-                moveAction(index);
+                if (ListenerType.MOVE.equals(listenerType())
+                        && (index = inMoveCoordinate(startPoint.x, startPoint.y)) >= 0) {
+                    moveAction(index, downX, downY, startPoint.x, startPoint.y);
+                }
                 break;
             case MotionEvent.ACTION_UP:
-                upAction(index);
+                endPoint.set(event.getX(), event.getY());
+                this.initButtonXs = buttonXs.stream().map(fs -> new float[] {fs[0], fs[1]}).collect(Collectors.toList());
+                this.initButtonYs = buttonYs.stream().map(fs -> new float[] {fs[0], fs[1]}).collect(Collectors.toList());
+                upAction(index, downX, downY);
                 break;
             default:
                 break;
@@ -55,9 +75,28 @@ public abstract class AbstractListener implements View.OnTouchListener {
         return -1;
     }
 
-    public abstract void downAction(int i);
+    public int inMoveCoordinate(float downX, float downY) {
+        for (int i = 0 ; i < initButtonXs.size() ; i++) {
+            float[] buttonX = initButtonXs.get(i);
+            float[] buttonY = initButtonYs.get(i);
+            if (downX >= buttonX[0] && downX <= buttonX[1] && downY >= buttonY[0] && downY <= buttonY[1]) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
-    public abstract void moveAction(int i);
+    public void downAction(int i, float downX, float downY) { };
 
-    public abstract void upAction(int i);
+    public void moveAction(int i, float currentX, float currentY, float firstX, float firstY) { };
+
+    public void upAction(int i, float downX, float downY) { };
+
+    public abstract ListenerType listenerType();
+
+    public enum ListenerType {
+        MOVE,
+        CLICK,
+        ;
+    }
 }

@@ -4,6 +4,7 @@ import com.chance.R;
 import com.chance.constants.BlockType;
 import com.chance.view.BodyView;
 import com.chance.view.ChooseControlView;
+import com.chance.view.SlideControlView;
 
 import android.os.Bundle;
 import android.view.Window;
@@ -61,5 +62,23 @@ public class CreateRoleActivity extends AppCompatActivity {
         changeBrow.setRectTopGap(70f);
         changeBrow.setBodyView(bodyView);
         changeBrow.setBlockType(BlockType.BROW);
+
+        SlideControlView slidePupil = findViewById(R.id.slide_pupil);
+        slidePupil.setSlideTopGap(20f);
+        slidePupil.setSlideThicknessProportions(0.16f);
+        slidePupil.setSlideRectProportions(2.5f);
+        slidePupil.setSlideRectLocation(0f);
+
+        SlideControlView slideHFhir = findViewById(R.id.slide_h_fhair);
+        slideHFhir.setSlideTopGap(20f);
+        slideHFhir.setSlideThicknessProportions(0.16f);
+        slideHFhir.setSlideRectProportions(2.5f);
+        slideHFhir.setSlideRectLocation(0f);
+
+        SlideControlView slideHair= findViewById(R.id.slide_hair);
+        slideHair.setSlideTopGap(20f);
+        slideHair.setSlideThicknessProportions(0.16f);
+        slideHair.setSlideRectProportions(2.5f);
+        slideHair.setSlideRectLocation(0f);
     }
 }
