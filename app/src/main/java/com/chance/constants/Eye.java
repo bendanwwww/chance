@@ -10,7 +10,7 @@ import com.chance.entities.BlockVO;
  */
 public enum Eye {
 
-    EYE_1(R.drawable.c3_eye0),
+    EYE_1(R.drawable.c3_eye1),
     ;
 
     private BlockVO block;

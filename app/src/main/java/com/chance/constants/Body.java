@@ -12,8 +12,8 @@ public enum Body {
 
     BODY_0(R.drawable.c3_body0),
     BODY_1(R.drawable.c3_body1),
-    BODY_2(R.drawable.c3_body2, 0F, -0.0261824663F),
-    BODY_3(R.drawable.c3_body3, 0F, -0.0261824663F),
+//    BODY_2(R.drawable.c3_body2, 0F, -6.2F / 401.03174F),
+//    BODY_3(R.drawable.c3_body3, 0F, -6.2F / 401.03174F),
     BODY_4(R.drawable.c3_body4),
     BODY_5(R.drawable.c3_body5),
     BODY_6(R.drawable.c3_body6),

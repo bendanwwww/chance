@@ -110,14 +110,14 @@ public class BodyView extends View {
         // 绘图
         // width: 1080 height: 1450 body height: 1245
         canvas.drawBitmap(body, gap + width * 0.083F + width * bodyVO.getLeftOffset(), 0F + height * bodyVO.getTopOffset(), paint);
-        canvas.drawBitmap(cloth, gap + width * 0.056F + width * clothVO.getLeftOffset(), body.getHeight() - cloth.getHeight() + height * clothVO.getTopOffset(), paint);
         canvas.drawBitmap(eye, gap + width * 0.111F, body.getHeight() * 0.385F, paint);
         canvas.drawBitmap(eyeb, gap + width * 0.157F, body.getHeight() * 0.393F, paint);
         canvas.drawBitmap(mou, gap + width * 0.222F + width * mouVO.getLeftOffset(), body.getHeight() * 0.642F + height * mouVO.getTopOffset(), paint);
         canvas.drawBitmap(brow, gap + width * 0.093F + width * browVO.getLeftOffset(), body.getHeight() * 0.313F + height * browVO.getTopOffset(), paint);
         canvas.drawBitmap(hair, gap + width * 0.074F + width * hariVO.getLeftOffset(), 0F + height * hariVO.getTopOffset(), paint);
-        canvas.drawBitmap(ear, gap + width * 0.083F, body.getHeight() * 0.337F, paint);
+        canvas.drawBitmap(ear, gap + width * 0.090F, body.getHeight() * 0.376F, paint);
         canvas.drawBitmap(fhair, gap + width * hariFVO.getLeftOffset(), body.getHeight() * 0.048F + height * hariFVO.getTopOffset(), paint);
+        canvas.drawBitmap(cloth, gap + width * 0.056F + width * clothVO.getLeftOffset(), body.getHeight() - cloth.getHeight() + height * clothVO.getTopOffset(), paint);
     }
 
     public void setViewId(BlockType type, int id) {

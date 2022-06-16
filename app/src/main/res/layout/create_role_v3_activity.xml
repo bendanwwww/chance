@@ -157,7 +157,7 @@
                                 android:layout_height="0dp"
                                 android:layout_marginBottom="3dp"
                                 android:orientation="vertical"
-                                android:backgroundTint="#BC682a20"
+                                android:backgroundTint="#00682a20"
                                 android:padding="0dp"
                                 android:background="@drawable/bgs"
                                 tools:ignore="Suspicious0dp">
